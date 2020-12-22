@@ -34,9 +34,10 @@ db.once('open', function () {
     console.log("Database connected");
 });
 
+const port = process.env.PORT || 3000;
 
-app.listen(3000, () => {
-    console.log('Serving on port 3000!!!')
+app.listen(port, () => {
+    console.log(`Serving on port ${port}!!!`)
 })
 app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
